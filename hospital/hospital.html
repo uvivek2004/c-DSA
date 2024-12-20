@@ -1,0 +1,450 @@
+<html>
+<head>
+	
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/hospital.css" type="text/css" rel="stylesheet">
+	<link rel="icon" href="images\s.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<script>
+$(document).ready(function(){
+  $(".menu-toggle").click(function(){
+    $(".navbar").toggle();
+  });
+});
+</script>
+
+	<script>
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+
+
+</script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+	
+	
+</head>
+<body>
+
+
+	<div class="top-nav col-xs-12 col-lg-12">
+		<div class="col-xs-12 col-lg-3">
+		one
+		</div>
+		<div class="col-xs-12 col-lg-3">
+		one
+		</div>
+		<div class="col-xs-12 col-lg-3">
+		one
+		</div>
+	</div>
+
+
+
+<!--start of navbar-->
+<div class="container-fluid add">
+	<div class="col-xs-12 col-lg-12">
+		<div class="col-xs-6 col-lg-2">
+			<img class="logo" src="images/lll.png" alt="logo">
+		</div>
+		
+      <div class="col-xs-6 col-lg-10">	
+
+	<div class="menu-toggle">
+							<i class="fa fa-bars" aria-hidden="true"></i>
+						</div>	
+
+		<nav class="navbar">
+          <div class="container-fluid">
+             
+					<ul class="nav navbar-nav">
+					<li class="active"><a class="bttnn" href="hospital.html">Home</a></li>
+					<li><a class="bttnn" href="about.html">About</a></li>
+					<li><a class="bttnn" href="gallery.html">Gallery</a></li>
+					<li><a class="bttnn" href="doctors.html">Doctors</a></li>
+					<li><a class="bttnn" href="department.html">Departments</a></li>
+					<li><a class="bttnn" href="price.html">Price</a></li>
+					<li><a class="bttnn" href="contact.html">Contact</a></li>
+					</ul>
+					
+			</div>
+	 
+		</nav>
+		
+	  </div>
+	  
+	  </div>
+	  </div>
+	<!--End of navbar-->  
+	
+
+						
+<!--nav class="options navbar-btn">
+
+
+  <div class="menu-toggle">
+	<i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+
+  <div class="container">
+	 <div class="navbar-header">
+      <a class="brand" href="hospital.html"><img src="images/lll.png" class="brand" alt="ll"></a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a class="bttnn" href="hospital.html">Home</a></li>
+      <li><a class="bttnn" href="about.html">About</a></li>
+      <li><a class="bttnn" href="gallery.html">Gallery</a></li>
+      <li><a class="bttnn" href="doctors.html">Doctors</a></li>
+	  <li><a class="bttnn" href="department.html">Departments</a></li>
+	  <li><a class="bttnn" href="price.html">Price</a></li>
+	  <li><a class="bttnn" href="contact.html">Contact</a></li>
+    </ul>
+
+  </div>
+</nav-->
+   
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="images/d1.jpg" alt="d1" style="width:100%; height:700px">
+        <div class="caption carousel-caption">
+          <p style="font-size:50px;">We Provide Best Medical Services</p>
+          <p class="para">Super Clinic Group has over two decades of experience in the healthcare sector,<br> 
+		  and is known for providing quality healthcare and valuable experience to all domestic<br> 
+		  and international patients. Our healthcare offerings are supported by a team of compassionate<br> 
+		  and dedicated medical professionals who have rich knowledge and experience in their respective domains.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/d2.jpg" alt="d2" style="width:100%; height:700px">
+        <div class="caption carousel-caption">
+          <p style="font-size:50px;">We Provide Best Medical Services</p>
+          <p class="para">Super Clinic Group has over two decades of experience in the healthcare sector,<br> 
+		  and is known for providing quality healthcare and valuable experience to all domestic<br> 
+		  and international patients. Our healthcare offerings are supported by a team of compassionate<br> 
+		  and dedicated medical professionals who have rich knowledge and experience in their respective domains.</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="images/d3.jpg" alt="d3" style="width:100%; height:700px">
+        <div class="caption carousel-caption">
+         <p style="font-size:50px;">We Provide Best Medical Services</p>
+          <p class="para">Super Clinic Group has over two decades of experience in the healthcare sector,<br> 
+		  and is known for providing quality healthcare and valuable experience to all domestic<br> 
+		  and international patients. Our healthcare offerings are supported by a team of compassionate<br> 
+and dedicated medical professionals who have rich knowledge and experience in their respective domains.</p>
+        </div>
+      </div>
+	
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="info-set">
+<div class="container">
+	<div class="main-block1 col-xs-12 col-lg-4" >
+	<i class="fa fa-heartbeat" style="font-size:48px;color:60d695;"></i>
+	<h4>HAVE AN</h4>
+	<h3>Emergency Needs?</h3>
+	<a href="contact.html"><button class="btn1">CONTACT</button></a>
+	</div>
+	<div class="main-block2 col-xs-12 col-lg-4" >
+	<i class="fa fa-file" style="font-size:48px;color:#21a078;"></i>
+	<h4>MAKE AN</h4>
+	<h3>Appointment</h3>
+	<a href="appointment.html"><button class="btn2">APPOINTMENT</button></a>
+	</div>
+	<div class="main-block3 col-xs-12 col-lg-4" >
+	<i class="fa fa-clock-o" style="font-size:52px;color:60d695;"></i>
+	<h4>OPENING</h4>
+	<h3>Hours</h3>
+	<h4>mon-sat: 24hours</h4>
+	<h4>Sunday: Closed</h4>
+	</div>
+    </div>
+</div>
+
+	<div class="abouttitle">
+		<h2>
+		About
+		<span>SuperClinic</span >
+		</h2>
+		<p style="font-size:20px;color:#656565;">It's simply dummy text of the printing and typesetting industry.<br>
+		 It's been the industry's standard dummy.<br>
+		</p>
+	</div>
+
+
+<div class="container">
+		<div class="main-block4 col-xs-12 col-lg-12">
+			<div class="wlcm col-xs-12 col-lg-6"> 
+			<h2>
+			Welcome to
+				<span>SuperClinic</span>
+				Medical Center
+			</h2>
+			<p style="font-size:18px;color:#656565;">
+			It's is simply dummy text of the printing and typesetting<br>
+			industry. It has been the industry's standard dummy text ever <br>
+			since the 1500s, when an unknown printer took a galley of type<br>
+			and scrambled it to make a type specimen book. It has survived <br>
+			not only five centuries, but also the leap.<br>
+			<br>
+			It is simply dummy text of the printing and typesetting<br>
+			industry. It has been the industry's standard dummy text<br>
+			ever since the 1500s, when an unknown.<br>
+			</p>
+			
+			<button class="btn2">Read More</button>
+			
+			</div>
+			
+			<div class="p col-xs-12 col-lg-6" >
+			<img src="images/wlcmpic.jpg"  alt="wlcmpic"  >
+			</div>
+		</div>
+</div>
+
+<div class="main-block6">
+	<img src="images/s.png"    alt="s"  style="width:100px;height:60px;" class="center"  >
+</div>
+
+<div class="container-fluid">
+	<div class="main-block7 col-xs-12 col-lg-12">
+	
+		<div class="kkk col-xs-12 col-lg-12">
+		<h2>
+		Why You
+		<span>choose SuperClinic</span>
+		</h2>
+		</div>
+		<div class="col-xs-12 col-lg-12">
+		<div class="whyimp col-xs-12 col-lg-8">
+			
+			<div class="row col-xs-12 col-lg-12 block-adjust">
+				<div class="adv col-xs-12 col-lg-6">
+					<div class="icon">
+						<i class="fa fa-rocket" aria-hidden="true"  ></i>
+					</div>
+					<div class="advw">
+						<h4><span>Fast Treatment</span></h4>
+						<p>sbabakjscbjakscbkajc<br>gAXVGXVAHVHCHABCAHC<br>YAGSCAYCGACBHASCB<br></P>
+					</div>
+					
+				</div>
+				
+				
+				
+				<div class="adv col-xs-12 col-lg-6">
+				<div class="icon">
+						<i class="fa fa-heartbeat" aria-hidden="true"></i>
+					</div>
+					
+					<div class="advw">
+					<h4><span>Modern Operation Theater</span></h4>
+					<p>sbabakjscbjakscbkajc<br>gAXVGXVAHVHCHABCAHC<br>YAGSCAYCGACBHASCB<br></P>
+					</div>
+				</div>
+				
+				</div>
+				
+				<div class="row col-xs-12 col-lg-12 block-adjust">
+				<div class="adv col-xs-12 col-lg-6">
+					<div class="icon">
+						<i class="fa fa-ambulance" aria-hidden="true"></i>
+					</div>
+					
+					<div class="advw">
+					<h4><span>24 Hour Emargency Service</span></h4>
+					<p>sbabakjscbjakscbkajc<br>gAXVGXVAHVHCHABCAHC<br>YAGSCAYCGACBHASCB<br></P>
+					</div>
+					</div>
+				<div class="adv col-xs-12 col-lg-6">
+					<div class="icon">
+						<i class="fa fa-usd" aria-hidden="true"></i>
+					</div>
+					
+					<div class="advw">
+					<h4><span>Cheap rate</span></h4>
+					<p>sbabakjscbjakscbkajc<br>gAXVGXVAHVHCHABCAHC<br>YAGSCAYCGACBHASCB<br></P>
+					</div>
+				</div>
+				</div>
+				
+				
+				<div class="row col-xs-12 col-lg-12 block-adjust">
+				<div class="adv col-xs-12 col-lg-6">
+					<div class="icon">
+						<i class="fa fa-hospital-o" aria-hidden="true"></i>
+					</div>
+					
+					<div class="advw">
+					<h4><span>High Quality Teatment</span></h4>
+					<p>sbabakjscbjakscbkajc<br>gAXVGXVAHVHCHABCAHC<br>YAGSCAYCGACBHASCB<br></P>
+					</div>
+					</div>
+				<div class="adv col-xs-12 col-lg-6">
+				<div class="icon">
+						<i<i class="fa fa-check" aria-hidden="true"></i>
+					</div>
+					
+					<div class="advw">
+					<h4>
+					<span>Expert Doctors</span>
+					</h4>
+					<p>sbabakjscbjakscbkajc<br>gAXVGXVAHVHCHABCAHC<br>YAGSCAYCGACBHASCB<br></P>
+					</div>
+				</div>
+				</div>
+		</div>
+		
+		
+		<div class="advpic col-xs-12 col-lg-4">
+				<img src="images/why.png"  alt="why" style="width:455px;height:500px;"  >
+		</div>
+		
+		</div>
+		
+		
+	</div>
+</div>
+
+
+
+
+	
+
+<div class="container back " >
+			<div class="review col-xs-12 col-lg-3">
+			<div class="revlogo">
+					<i class="fa fa-smile-o" aria-hidden="true"></i>
+				</div>
+				<h2><span class="fact_number">4567</span></h2>
+				<h3><span>HAPPY PATIENTS</span></h3>
+			</div>
+			<div class="review  col-xs-12 col-lg-3">
+			<div class="revlogo">
+					<i class="fa fa-check" aria-hidden="true"></i>
+				</div>
+				<h2><span class="fact_number">5123</span></h2>
+				<h3><span>SERVICE DONE</span></h3>
+			</div>
+			<div class="review  col-xs-12 col-lg-3">
+			<div class="revlogo">
+					<i class="fa fa-address-book" aria-hidden="true"></i>
+				</div>
+				<h2><span class="fact_number">4222</span></h2>
+				<h3><span>OUR DOCTORS</span></h3>
+			</div>
+			<div class="review  col-xs-12 col-lg-3">
+			<div class="revlogo">
+					<i class="fa fa-briefcase" aria-hidden="true"></i>
+				</div>
+				<h2><span class="fact_number">453<span></h2>
+				<h3><span>OUR DEPARTMENTS</span></h3>
+			</div>
+	</div>
+	
+	<hr>
+	
+<div class="revv" style="background-color:#21A078; width:100%;height:300px;position:absolute;">
+	
+</div>
+<div class="container  col-xs-12 col-lg-12"  style="background-color:#21A078;">
+
+			<div class="footer col-xs-12 col-lg-4">
+				<h1>Hospital Network</h1>
+				<br>
+				<p>SuperClinic Speciality Hospital, Mohali<br><br>SuperClinic Speciality Hospital, Dehradun<br><br>SuperClinic Speciality Hospital, Bathinda<br></p>
+			</div>
+			
+			<div class="footer col-xs-12 col-lg-4 ">
+				<h1>Our Specialities</h1>
+				<br>
+				<p>Cardiac Sciences<br><br>Neuro Sciences<br><br>Orthopaedics<br><br>Bone Marrow Transplant<br><br>Kidney Transplant<br></p>
+			</div>
+			
+			<div class="footer col-xs-12 col-lg-4">
+				<h1>Top Procedures</h1>
+				<br>
+				<p>Bariatric Surgery<br><br>Bone Marrow Transplant (BMT)<br><br>Kidney Transplant<br><br>Valvular Heart Surgery<br><br>Knee Replacement Surgery<br><br></p>
+				</div>
+</div>
+
+<div class="last">
+<h5>Copyright 2019 @ SuperClinic</h5>
+</div>
+
+
+	
+</body>
+</html>

@@ -1,0 +1,191 @@
+<html>
+<head>
+
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/hospital.css" type="text/css" rel="stylesheet">
+	<link rel="icon" href="images\s.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<script>
+$(document).ready(function(){
+  $(".menu-toggle").click(function(){
+    $(".navbar").toggle();
+  });
+});
+</script>
+
+	<script>
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+
+
+</script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="top-nav col-xs-12 col-lg-12">
+		<div class="col-xs-12 col-lg-3">
+		one
+		</div>
+		<div class="col-xs-12 col-lg-3">
+		one
+		</div>
+		<div class="col-xs-12 col-lg-3">
+		one
+		</div>
+	</div>
+<!--start of navbar-->
+<div class="container-fluid add">
+	<div class="col-xs-12 col-lg-12">
+		<div class="col-xs-6 col-lg-2">
+			<img class="logo" src="images/lll.png" alt="logo">
+		</div>
+		
+      <div class="col-xs-6 col-lg-10">	
+
+	<div class="menu-toggle">
+							<i class="fa fa-bars" aria-hidden="true"></i>
+						</div>	
+
+		<nav class="navbar">
+          <div class="container-fluid">
+             
+					<ul class="nav navbar-nav">
+					<li class="active"><a class="bttnn" href="hospital.html">Home</a></li>
+					<li><a class="bttnn" href="about.html">About</a></li>
+					<li><a class="bttnn" href="gallery.html">Gallery</a></li>
+					<li><a class="bttnn" href="doctors.html">Doctors</a></li>
+					<li><a class="bttnn" href="department.html">Departments</a></li>
+					<li><a class="bttnn" href="price.html">Price</a></li>
+					<li><a class="bttnn" href="contact.html">Contact</a></li>
+					</ul>
+					
+			</div>
+	 
+		</nav>
+		
+	  </div>
+	  
+	  </div>
+	  </div>
+	<!--End of navbar-->  
+	  
+
+	<div class="abouttitle" style="background-color:#eeeeee7d; margin-top: 75px;">
+		<h2>
+		Contact With
+		<span>SuperClinic</span>
+		</h2>
+	</div>
+<br>
+		<hr>
+	<div class="container add">
+		<div class="col-xs-12 col-lg-12">
+			<div class="col-xs-12 col-lg-6">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8704.309797318238!2d76.71827127199954!3d30.73368563356022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fee144e36fcd5%3A0xa254c2b1f858248a!2sMax+Super+Specialty+Hospital%2C+Mohali!5e0!3m2!1sen!2sin!4v1556511011363!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;margin-top:-30px;" allowfullscreen></iframe>
+		
+
+				
+			</div>
+			<div class="col-xs-12 col-lg-4 background4" style="background-image: url(images/doctor.jpg);">
+				<div>
+				<h3 class="text8">Address</h3>
+				<i class="fa fa-home text7"> Near Civil Hospital, Phase 6,<br><br>Sector 56A, SAS Nagar,<br><br> Chandigarh 160055</i>
+				
+				<hr>
+				<i class="fa fa-phone-square text7">+91-968574354</i>
+				<i class="fa fa-phone-square text7">+91-789652310</i>
+				<br>
+				<hr>
+				<i class="fa fa-envelope text7" aria-hidden="true"> uvivekji123@gmail.com</i>
+				<i class="fa fa-envelope text7" aria-hidden="true"> lavi85919@gmail.com</i>
+				</div>
+			</div>
+				
+			</div>
+			
+     </div>	
+
+	
+	<hr>
+	
+
+<div class="container  col-xs-12 col-lg-12"  style="background-color:#21A078;">
+
+			<div class="footer col-xs-12 col-lg-4">
+				<h1>Hospital Network</h1>
+				<br>
+				<p>SuperClinic Speciality Hospital, Mohali<br><br>SuperClinic Speciality Hospital, Dehradun<br><br>SuperClinic Speciality Hospital, Bathinda<br></p>
+			</div>
+			
+			<div class="footer col-xs-12 col-lg-4 ">
+				<h1>Our Specialities</h1>
+				<br>
+				<p>Cardiac Sciences<br><br>Neuro Sciences<br><br>Orthopaedics<br><br>Bone Marrow Transplant<br><br>Kidney Transplant<br></p>
+			</div>
+			
+			<div class="footer col-xs-12 col-lg-4">
+				<h1>Top Procedures</h1>
+				<br>
+				<p>Bariatric Surgery<br><br>Bone Marrow Transplant (BMT)<br><br>Kidney Transplant<br><br>Valvular Heart Surgery<br><br>Knee Replacement Surgery<br><br></p>
+				</div>
+</div>
+
+<div class="last">
+<h5>Copyright 2019 @ SuperClinic</h5>
+</div>
+
+	</body>
+	<html>
